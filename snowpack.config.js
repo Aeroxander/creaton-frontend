@@ -8,13 +8,14 @@ module.exports = {
   plugins: [
     "@snowpack/plugin-svelte",
     "@snowpack/plugin-dotenv",
-    "@snowpack/plugin-typescript",
+    ["@snowpack/plugin-typescript", "--allowJs"],
   ],
   install: [
     /* ... */
   ],
   installOptions: {
     installTypes: true,
+    polyfillNode: true,
     /* ... */
   },
   devOptions: {

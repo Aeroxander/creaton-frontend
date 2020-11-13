@@ -24,7 +24,29 @@
 		"build": "snowpack build"
 	},
 	"dependencies": {
-		"svelte": "^3.24.0"
+		"@curi/interactions": "^2.0.3",
+		"@curi/router": "^2.1.2",
+		"@curi/svelte": "^2.0.0-beta.6",
+		"@superfluid-finance/ethereum-contracts": "^0.1.2-preview-20201014-fix5",
+		"@truffle/contract": "^4.2.30",
+		"@ethersproject/bignumber": "^5.0.8",
+		"@ethersproject/bytes": "^5.0.5",
+		"@ethersproject/contracts": "^5.0.5",
+		"@ethersproject/providers": "^5.0.13",
+		"@ethersproject/solidity": "^5.0.5",
+		"@hickory/browser": "^2.1.0",
+		"@textile/hub": "^1.1.1",
+		"@urql/core": "^1.12.3",
+		"@urql/devtools": "^2.0.2",
+		"isomorphic-ws": "^4.0.1",
+		"named-logs": "0.0.13",
+		"named-logs-console": "0.0.14",
+		"svelte": "^3.24.0",
+		"graphql": "^15.3.0",
+		"web3w": "0.2.32",
+		"web3w-portis-loader": "^0.2.0",
+		"web3w-torus-loader": "^0.2.4",
+		"web3w-walletconnect-loader": "^0.2.0"
 	},
 	"devDependencies": {
 		"@snowpack/app-scripts-svelte": "^1.9.2",
@@ -43,6 +65,7 @@
 		"svelte-check": "^1.1.11",
 		"svelte-preprocess": "^4.0.8",
 		"tailwindcss": "^1.9.6",
+		"@tailwindcss/ui": "^0.5.0",
 		"typescript": "^4.0.0"
 	},
 	"husky": {

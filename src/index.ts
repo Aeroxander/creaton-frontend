@@ -22,5 +22,6 @@ declare global {
       accept: Function;
       dispose: Function;
     };
+    env: {[name: string]: string};
   }
 }
