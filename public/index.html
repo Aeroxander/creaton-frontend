@@ -2,14 +2,49 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="/favicon.ico" />
+    <link rel="icon" href="favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Web site created using create-snowpack-app" />
     <title>Snowpack App</title>
-  </head>
+  
+    <script>
+      window.relpath="";
+      const count = (window.relpath.match(/../g) || []).length;
+      let lPathname = location.pathname;
+      if (lPathname.endsWith('/')) {
+        lPathname = lPathname.slice(0, lPathname.length - 1);
+      }
+      const pathSegments = lPathname.split('/');
+      window.basepath = pathSegments.slice(0, pathSegments.length - count).join('/');
+      if (!window.basepath.endsWith('/')) {
+        window.basepath += '/';
+      }
+      // ensure we save href as they are loaded, so they do not change on page navigation
+      document.querySelectorAll("link[href]").forEach((v) => v.href = v.href);
+    </script>
+
+    <script>
+      let newLocation = location.href;
+      const pathname = location.pathname;
+      if (newLocation.startsWith('http:')) {
+        if (!(location.hostname === 'localhost' || (newLocation.endsWith('.link') && location.host.split('.').length > 3))) {
+          newLocation = 'https' + newLocation.slice(4);
+        }
+      }
+      if (pathname.endsWith('index.html')) {
+        newLocation = newLocation.slice(0, newLocation.length - 10);
+      } else if (!pathname.endsWith('/')) {
+        newLocation = newLocation + '/';
+      }
+      if (newLocation !== location.href) {
+        console.log("replace : " + location.href + " -> " + newLocation);
+        location.replace(newLocation);
+      }
+    </script>
+</head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <script type="module" src="/_dist_/index.js"></script>
+    <script type="module" src="_dist_/index.js"></script>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
