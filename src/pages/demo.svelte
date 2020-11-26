@@ -2,7 +2,6 @@
   import WalletAccess from '../templates/WalletAccess.svelte';
   import Button from '../components/Button.svelte';
   import Blockie from '../components/Blockie.svelte';
-  import {test} from 'creaton-common';
   import {logs} from 'named-logs';
   import messages from '../stores/messages';
   import {wallet, flow, chain} from '../stores/wallet';
@@ -17,7 +16,6 @@
 
   let message: string = undefined;
 
-  console.log('CommonLib', test('0x0000000000000000000000000000000000000001', 'hello'));
 </script>
 
 <style>

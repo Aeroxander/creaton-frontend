@@ -5,7 +5,6 @@
   import {Contract} from '@ethersproject/contracts';
   import {contracts} from '../contracts.json';
   import Blockie from '../components/Blockie.svelte';
-  import {test} from 'creaton-common';
   import {logs} from 'named-logs';
   import {wallet, balance, flow, chain} from '../stores/wallet';
   import {identity} from 'svelte/internal';
