@@ -8,7 +8,7 @@ module.exports = {
   plugins: [
     "@snowpack/plugin-svelte",
     "@snowpack/plugin-dotenv",
-    ["@snowpack/plugin-typescript", "--allowJs"],
+    ["@snowpack/plugin-typescript", "--allowJs"]
   ],
   install: [
     /* ... */
@@ -19,6 +19,8 @@ module.exports = {
     /* ... */
   },
   devOptions: {
+    fallback: "index.ts",
+    hmr: false
     /* ... */
   },
   buildOptions: {

@@ -4,7 +4,6 @@
   import Navbar from './components/Navbar.svelte';
   import Navigating from './_routing/curi/Navigating.svelte';
   import Loading from './components/Loading.svelte';
-  import TailwindCss from "./TailwindCSS.svelte";
 </script>
 
 <Router {pages} globalQueryStrings={['subgraph', 'debug', 'log', 'trace']}>

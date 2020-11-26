@@ -3,12 +3,14 @@
   "include": ["src/**/*", "scripts/**/*", "_build/**/*", "types"],
   "exclude": ["node_modules/*", "public/*"],
   "compilerOptions": {
+    "target": "es6",
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "preserve",
     "baseUrl": "./",
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
+    "esModuleInterop": true,
     /* Additional Options */
     //"strict": true,
     "skipLibCheck": true,
